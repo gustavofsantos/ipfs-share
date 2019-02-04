@@ -9,7 +9,7 @@ const dragReject = css`
 `;
 
 const messageColors = {
-  default: '#999',
+  default: '#444',
   error: '',
   success: ''
 };

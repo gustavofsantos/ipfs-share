@@ -18,7 +18,7 @@ The other version use the alpha version of the IPFS. It uses discovery servers t
 
 To share a file you will first add a file as a buffer into IPFS, it will generate a hash. Then, create a JSON with these properties:
 
-```json
+```javascript
 {
   "name": "File name.ext",  // name of the raw file
   "size": 292212,           // size of the raw file
