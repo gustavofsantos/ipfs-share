@@ -7,7 +7,7 @@ import Title from '../../components/Title';
 import { addFile, addMetadata } from '../../lib/ipfs';
 
 
-export default function Main() {
+export default function Share() {
   const [files, setFiles] = useState([]);
 
   const handleDropFiles = async dropFiles => {
