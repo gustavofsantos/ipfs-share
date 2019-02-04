@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Container, Title } from './styles';
 
-export default (props) => (
+export default () => (
   <Container>
     <Title>
       IPFS Share

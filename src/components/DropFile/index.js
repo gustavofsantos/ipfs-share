@@ -1,9 +1,7 @@
 import React from 'react';
 import Dropzone from 'react-dropzone';
-// import { connect } from 'react-redux';
 
 import { DropContainer, UploadMessage } from './styles';
-// import { addFiles } from '../../actions';
 
 function renderDragMessage(isDragActive, isDragReject) {
   if (!isDragActive) {
@@ -49,16 +47,5 @@ function DropFile(props) {
     </Dropzone>
   );
 }
-
-// function mapDispatch() {
-//   return {
-//     onUpload: addFiles
-//   }
-// }
-
-// export default connect(
-//   null,
-//   mapDispatch,
-// )(DropFile);
 
 export default DropFile;
