@@ -1,21 +1,22 @@
-import React, { Component } from 'react';
-import Main from './pages/Main';
+import React from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import Share from './pages/Share';
+import Downloader from './pages/Downloader';
 import GlobalStyle from './styles/global';
 
-class App extends Component {
+function App() {
 
-  state = {
-    ready: false
-  };
-
-  render() {
-    return (
+  return (
+    <Router>
       <div>
         <GlobalStyle />
-        <Main />
+
+        <Route path="/" exact component={Share} />
+        <Route path="/share" component={Share} />
+        <Route path="/downloader" component={Downloader} />
       </div>
-    );
-  }
+    </Router>
+  )
 }
 
 export default App;

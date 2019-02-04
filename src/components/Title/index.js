@@ -2,10 +2,10 @@ import React from 'react';
 
 import { Container, Title } from './styles';
 
-export default () => (
+export default (props) => (
   <Container>
     <Title>
-      IPFS Share
+      { props.children }
     </Title>
   </Container>
 )

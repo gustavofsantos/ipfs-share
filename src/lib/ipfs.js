@@ -46,3 +46,27 @@ export async function addMetadata(metadata) {
     console.error(e);
   }
 }
+
+export async function getMetadata(hash) {
+  try {
+    const result = await ipfs.get(hash);
+    const buffer = result[0].content;
+
+    const content = buffer.toString();
+
+    return content;
+  } catch (e) {
+    console.error(e);
+  }
+}
+
+export async function downloadRawFile(hash) {
+  try {
+    const result = await ipfs.get(hash);
+    const buffer = result[0].content;
+
+    return buffer;
+  } catch (e) {
+    console.error(e);
+  }
+}

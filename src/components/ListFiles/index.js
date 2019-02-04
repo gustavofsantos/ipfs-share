@@ -21,10 +21,6 @@ export default function ListFiles(props) {
 
                 <span>
                   { file.metadataHash }
-
-                  <button onClick={() => console.log('show qr code')}>
-                    QR Code
-                  </button>
                 </span>
               </div>
             </FileInfo>

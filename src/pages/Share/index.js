@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Container, Content } from './styles';
 import DropFile from '../../components/DropFile';
 import ListFiles from '../../components/ListFiles';
-import Title from '../../components/Title';
 
 import { addFile, addMetadata } from '../../lib/ipfs';
+import Title from '../../components/Title';
+import LinkButton from '../../components/LinkButton';
 
 
 export default function Share() {
@@ -38,7 +40,9 @@ export default function Share() {
 
   return (
     <Container>
-      <Title />
+      <Title>
+        IPFS Share
+      </Title>
       <Content>
         <DropFile onDrop={handleDropFiles} />
         {
@@ -46,6 +50,12 @@ export default function Share() {
             <ListFiles files={files} />
         }
       </Content>
+
+      <Link to="/downloader">
+        <LinkButton>
+          Downloader
+        </LinkButton>
+      </Link>
     </Container>
   )
 }
